@@ -42,7 +42,12 @@ include('header.php');
                 <strong><?php echo htmlspecialchars($row['task']); ?></strong>
                 <br>
                 <small class="text-muted">
-                    Created: <?php echo date('F j, Y, g:i a', strtotime($row['created_at'])); ?>
+                    <?php if($row['created_at'] === $row['updated_at']) : ?>
+                        Created: <?php echo date('F j, Y, g:i a', strtotime($row['created_at'])); ?>
+                    <?php else : ?>
+                        Updated: <?php echo date('F j, Y, g:i a', strtotime($row['updated_at'])); ?>
+                    <?php endif; ?>
+                    
                 </small>
             </div>
             <span>
