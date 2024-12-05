@@ -5,7 +5,7 @@ require_once 'database.php';
 
 // Database configuration
 $host = "database_host";
-$username = "database_password";
+$username = "database_user";
 $password = "database_password";
 $dbname = "database_name";
 
