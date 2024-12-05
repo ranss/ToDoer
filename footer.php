@@ -3,7 +3,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-3 mt-4">
         <div class="container text-center">
-            <p>&copy; 2024 To-Do List App | All Rights Reserved</p>
+            <p>&copy; <?php echo date('Y'); ?> ToDoer | All Rights Reserved</p>
         </div>
     </footer>
 

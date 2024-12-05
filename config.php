@@ -1,14 +1,14 @@
-<?php
-// Database connection details
+<?php 
+
+// Include the Database class
+require_once 'database.php';
+
+// Database configuration
 $host = "localhost";
-$username = "root"; // Your MySQL username
-$password = "P@ssword!88"; // Your MySQL password
-$dbname = "todo_list"; // The database name
+$username = "root";
+$password = "P@ssword!88";
+$dbname = "todo_list";
 
-// Create connection
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Get the database instance
+$db = Database::getInstance($host, $username, $password, $dbname);
+$conn = $db->getConnection();

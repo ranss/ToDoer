@@ -30,6 +30,8 @@ if (isset($_GET['id'])) {
     // If the form is submitted, update the task
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['task'])) {
         $new_task = trim($_POST['task']); // Trim any extra spaces
+        $priority = trim($_POST['priority']); // Trim any extra spaces
+        $status   = trim($_POST['status']); // Trim any extra spaces
 
         // Simple validation to ensure the task is not empty
         if (empty($new_task)) {
